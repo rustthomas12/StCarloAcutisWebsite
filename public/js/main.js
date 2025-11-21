@@ -10,6 +10,14 @@ document.addEventListener('DOMContentLoaded', function() {
             navMenu.classList.toggle('active');
             hamburger.classList.toggle('active');
         });
+
+        // Close menu when clicking on a nav link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                navMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+            });
+        });
     }
 
     // Smooth Scrolling for Anchor Links

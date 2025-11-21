@@ -1,13 +1,12 @@
 # Blessed Carlo Acutis Parish Website
 
-Official website for Blessed Carlo Acutis Parish, serving West Brookfield, North Brookfield, and East Brookfield, MA.
+Official website for Blessed Carlo Acutis Parish, serving West Brookfield and North Brookfield, MA.
 
 ## About
 
-Blessed Carlo Acutis Parish was formed on July 1, 2024, from the merger of three Catholic communities:
+Blessed Carlo Acutis Parish was formed on July 1, 2024, from the merger of two Catholic communities:
 - Our Lady of the Sacred Heart Parish (West Brookfield)
 - St. Joseph Parish (North Brookfield)
-- St. John the Baptist Parish (East Brookfield)
 
 ## Features
 
@@ -15,9 +14,7 @@ Blessed Carlo Acutis Parish was formed on July 1, 2024, from the merger of three
 - **Mass Times**: Complete schedule for weekend and daily Masses, confessions, and holy days
 - **Weekly Bulletins**: Current and archived parish bulletins
 - **Sacraments**: Information about Baptism, First Communion, Confirmation, Marriage, and more
-- **Ministries**: Parish ministries and opportunities to serve
 - **Contact**: Parish office information and contact form
-- **Online Giving**: Support the parish financially
 
 ## Church Locations
 

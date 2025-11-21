@@ -1,0 +1,994 @@
+/* Catholic Parish Website Styles - Blessed Carlo Acutis Parish */
+
+/* ===== ROOT VARIABLES ===== */
+:root {
+    --primary-color: #1e3a8a; /* Deep blue */
+    --secondary-color: #b8860b; /* Dark goldenrod */
+    --accent-color: #8b4513; /* Saddle brown */
+    --text-dark: #1f2937;
+    --text-light: #6b7280;
+    --bg-light: #f9fafb;
+    --white: #ffffff;
+    --border-color: #e5e7eb;
+}
+
+/* ===== GLOBAL STYLES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Palatino', 'Book Antiqua', serif;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===== NAVIGATION ===== */
+.navbar {
+    background: var(--white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h2 {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.logo .tagline {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+    font-style: italic;
+    margin: 0;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-menu a {
+    color: var(--text-dark);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: var(--secondary-color);
+}
+
+.btn-nav {
+    background: var(--secondary-color);
+    color: var(--white) !important;
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+}
+
+.btn-nav:hover {
+    background: var(--accent-color);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: var(--primary-color);
+    transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+    .hamburger {
+        display: flex;
+    }
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+    height: 500px;
+    background: linear-gradient(rgba(30, 58, 138, 0.8), rgba(30, 58, 138, 0.9)),
+                url('/images/hero-bg.jpg') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--white);
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s;
+    border: 2px solid transparent;
+}
+
+.btn-primary {
+    background: var(--secondary-color);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background: var(--accent-color);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--white);
+    border-color: var(--white);
+}
+
+.btn-secondary:hover {
+    background: var(--white);
+    color: var(--primary-color);
+}
+
+.btn-light {
+    background: var(--white);
+    color: var(--primary-color);
+}
+
+.btn-outline {
+    background: transparent;
+    border-color: var(--white);
+    color: var(--white);
+}
+
+/* ===== PAGE HEADER ===== */
+.page-header {
+    height: 300px;
+    background: linear-gradient(rgba(30, 58, 138, 0.85), rgba(30, 58, 138, 0.95)),
+                url('/images/church-interior.jpg') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+/* ===== QUICK INFO CARDS ===== */
+.quick-info {
+    padding: 60px 0;
+    background: var(--bg-light);
+}
+
+.info-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.info-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+}
+
+.info-card .icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.info-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.info-card a {
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+/* ===== SECTIONS ===== */
+section {
+    padding: 60px 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--text-light);
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    font-style: italic;
+}
+
+/* ===== ABOUT SECTION ===== */
+.about-preview, .our-story {
+    background: var(--white);
+}
+
+.about-content, .story-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-text, .story-text {
+    font-size: 1.1rem;
+}
+
+.about-text h2, .story-text h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.carlo-acutis-info, .patron-info {
+    background: var(--bg-light);
+    padding: 2rem;
+    border-radius: 10px;
+    border-left: 4px solid var(--secondary-color);
+}
+
+.carlo-acutis-info h3, .patron-info h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.quote {
+    font-style: italic;
+    color: var(--secondary-color);
+    margin-top: 1rem;
+    font-weight: 600;
+}
+
+/* ===== SACRAMENTS ===== */
+.sacraments-preview, .sacraments-detail {
+    background: var(--bg-light);
+}
+
+.sacraments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.sacrament-card {
+    background: var(--white);
+    padding: 2rem;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.sacrament-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.sacraments-cta {
+    text-align: center;
+}
+
+.sacrament-section {
+    background: var(--white);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    border-left: 4px solid var(--secondary-color);
+}
+
+.sacrament-section h2 {
+    color: var(--primary-color);
+}
+
+/* ===== MASS SCHEDULE ===== */
+.mass-schedule, .confession-schedule, .holy-days {
+    background: var(--white);
+}
+
+.schedule-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.schedule-card {
+    background: var(--bg-light);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.schedule-header {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.schedule-header h3 {
+    color: var(--white);
+    margin: 0;
+}
+
+.schedule-header .time {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+
+.schedule-details {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.schedule-details .location {
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.daily-mass {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.daily-mass-card {
+    background: var(--bg-light);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    flex: 1;
+    min-width: 250px;
+    max-width: 400px;
+}
+
+.mass-note {
+    background: #fff3cd;
+    padding: 1.5rem;
+    border-radius: 5px;
+    border-left: 4px solid var(--secondary-color);
+}
+
+/* ===== CONFESSION ===== */
+.confession-schedule {
+    background: var(--bg-light);
+}
+
+.confession-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.confession-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.confession-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.confession-time {
+    text-align: center;
+    padding: 1rem;
+    background: var(--bg-light);
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+.confession-time .time {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+.prayer-box {
+    background: var(--bg-light);
+    padding: 2rem;
+    border-radius: 10px;
+    border-left: 4px solid var(--secondary-color);
+    margin-top: 3rem;
+}
+
+.prayer-box h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.prayer {
+    font-style: italic;
+    line-height: 1.8;
+}
+
+/* ===== HOLY DAYS ===== */
+.holy-days-list ul {
+    background: var(--bg-light);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.holy-days-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.holy-days-list li:last-child {
+    border-bottom: none;
+}
+
+.holy-days-list .note {
+    margin-top: 1.5rem;
+    font-style: italic;
+    color: var(--text-light);
+}
+
+/* ===== BULLETINS ===== */
+.current-bulletin {
+    background: var(--white);
+}
+
+.bulletin-viewer {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+.bulletin-card {
+    background: var(--bg-light);
+    padding: 2rem;
+    border-radius: 10px;
+    border-left: 4px solid var(--secondary-color);
+}
+
+.bulletin-card.featured {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.bulletin-header h3 {
+    color: var(--primary-color);
+}
+
+.bulletin-header .date {
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+.bulletin-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.bulletin-contents {
+    list-style: none;
+}
+
+.bulletin-contents li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.bulletin-contents li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+}
+
+.subscribe-box {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.subscribe-box h3 {
+    color: var(--white);
+}
+
+.subscribe-form {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.subscribe-form input {
+    flex: 1;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.bulletin-archive {
+    background: var(--bg-light);
+}
+
+.archive-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.archive-item {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.archive-item:hover {
+    transform: translateY(-3px);
+}
+
+.archive-date {
+    color: var(--secondary-color);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.archive-link {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.bulletin-submission {
+    background: var(--white);
+}
+
+.submission-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.detail-box {
+    background: var(--bg-light);
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+.detail-box h4 {
+    color: var(--primary-color);
+}
+
+/* ===== MINISTRIES ===== */
+.ministry-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.ministry-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.ministry-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.ministry-card h3 {
+    color: var(--primary-color);
+}
+
+.get-involved {
+    background: var(--bg-light);
+    padding: 3rem;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+/* ===== CONTACT ===== */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.contact-card {
+    background: var(--bg-light);
+    padding: 2rem;
+    border-radius: 10px;
+    border-left: 4px solid var(--secondary-color);
+}
+
+.contact-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.contact-form-section {
+    background: var(--bg-light);
+    padding: 3rem;
+    border-radius: 10px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 2rem auto 0;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+/* ===== GIVING ===== */
+.giving-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--primary-color);
+}
+
+.giving-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.giving-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.giving-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.stewardship {
+    background: var(--bg-light);
+    padding: 3rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* ===== MISSION & VALUES ===== */
+.mission-statement {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.value-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.value-card h3 {
+    color: var(--primary-color);
+}
+
+/* ===== STAFF ===== */
+.staff-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.staff-member {
+    background: var(--bg-light);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.staff-member h3 {
+    color: var(--primary-color);
+}
+
+.staff-member .title {
+    color: var(--secondary-color);
+    font-weight: 600;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+/* ===== CTA SECTION ===== */
+.cta {
+    background: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+}
+
+.cta h2 {
+    color: var(--white);
+    font-size: 2.5rem;
+}
+
+.cta p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background: var(--text-dark);
+    color: #d1d5db;
+    padding: 3rem 0 1rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h3,
+.footer-section h4 {
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+    color: #d1d5db;
+}
+
+.footer-section a:hover {
+    color: var(--secondary-color);
+}
+
+.parish-motto {
+    font-style: italic;
+    color: var(--secondary-color);
+    margin-top: 1rem;
+}
+
+.footer-bottom {
+    border-top: 1px solid #4b5563;
+    padding-top: 2rem;
+    text-align: center;
+}
+
+/* ===== ANIMATIONS ===== */
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+.slide-up {
+    animation: slideUp 0.6s ease-out;
+}
+
+.slide-left {
+    animation: slideLeft 0.6s ease-out;
+}
+
+.slide-right {
+    animation: slideRight 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .about-content,
+    .story-content,
+    .bulletin-viewer {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .subscribe-form {
+        flex-direction: column;
+    }
+
+    .cta-buttons,
+    .hero-buttons {
+        flex-direction: column;
+    }
+}
+
+@media print {
+    .navbar, .footer, .hero, .cta {
+        display: none;
+    }
+}

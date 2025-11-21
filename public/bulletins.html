@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Weekly bulletins and parish news from Blessed Carlo Acutis Parish">
+
+    <title>Weekly Bulletins - Blessed Carlo Acutis Parish</title>
+
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/index.html" class="logo">
+                <h2>BLESSED CARLO ACUTIS PARISH</h2>
+                <p class="tagline">Diocese of Worcester</p>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/mass-times.html">Mass Times</a></li>
+                <li><a href="/bulletins.html" class="active">Bulletins</a></li>
+                <li><a href="/sacraments.html">Sacraments</a></li>
+                <li><a href="/ministries.html">Ministries</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+                <li><a href="/give.html" class="btn-nav">Give</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="header-overlay"></div>
+        <div class="container">
+            <h1 class="fade-in">Weekly Bulletins</h1>
+            <p class="fade-in">Stay connected with parish news and events</p>
+        </div>
+    </section>
+
+    <!-- Current Bulletin Section -->
+    <section class="current-bulletin">
+        <div class="container">
+            <h2 class="section-title slide-up">This Week's Bulletin</h2>
+            <p class="section-subtitle slide-up">Week of <span id="currentWeek">January 19, 2025</span></p>
+
+            <div class="bulletin-viewer slide-up">
+                <div class="bulletin-card featured">
+                    <div class="bulletin-header">
+                        <h3>Current Week</h3>
+                        <p class="date" id="bulletinDate">January 19, 2025</p>
+                    </div>
+                    <div class="bulletin-preview">
+                        <p>View this week's parish bulletin for Mass intentions, upcoming events, ministry news, and important announcements.</p>
+                    </div>
+                    <div class="bulletin-actions">
+                        <a href="#" class="btn btn-primary" id="viewCurrent">View Bulletin (PDF)</a>
+                        <a href="#" class="btn btn-secondary" id="printCurrent">Print</a>
+                    </div>
+                </div>
+
+                <div class="bulletin-info">
+                    <h3>What's Inside This Week</h3>
+                    <ul class="bulletin-contents">
+                        <li>Mass Intentions for the Week</li>
+                        <li>Upcoming Parish Events</li>
+                        <li>Ministry & Group Meetings</li>
+                        <li>Faith Formation News</li>
+                        <li>Pastor's Message</li>
+                        <li>Prayers & Intentions</li>
+                        <li>Liturgical Calendar</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="subscribe-box slide-up">
+                <h3>Get Bulletins via Email</h3>
+                <p>Never miss a bulletin! Subscribe to receive our weekly bulletin delivered to your inbox every Friday.</p>
+                <form class="subscribe-form" id="bulletinSubscribe">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bulletin Archive -->
+    <section class="bulletin-archive">
+        <div class="container">
+            <h2 class="section-title slide-up">Bulletin Archive</h2>
+            <p class="section-subtitle slide-up">Previous weeks and special editions</p>
+
+            <div class="archive-grid">
+                <!-- Bulletin items will be dynamically loaded -->
+                <div class="archive-item slide-up">
+                    <div class="archive-date">January 12, 2025</div>
+                    <h4>Second Sunday in Ordinary Time</h4>
+                    <a href="#" class="archive-link">View PDF →</a>
+                </div>
+
+                <div class="archive-item slide-up">
+                    <div class="archive-date">January 5, 2025</div>
+                    <h4>Epiphany of the Lord</h4>
+                    <a href="#" class="archive-link">View PDF →</a>
+                </div>
+
+                <div class="archive-item slide-up">
+                    <div class="archive-date">December 29, 2024</div>
+                    <h4>Feast of the Holy Family</h4>
+                    <a href="#" class="archive-link">View PDF →</a>
+                </div>
+
+                <div class="archive-item slide-up">
+                    <div class="archive-date">December 25, 2024</div>
+                    <h4>Nativity of the Lord (Christmas)</h4>
+                    <a href="#" class="archive-link">View PDF →</a>
+                </div>
+
+                <div class="archive-item slide-up">
+                    <div class="archive-date">December 22, 2024</div>
+                    <h4>Fourth Sunday of Advent</h4>
+                    <a href="#" class="archive-link">View PDF →</a>
+                </div>
+
+                <div class="archive-item slide-up">
+                    <div class="archive-date">December 15, 2024</div>
+                    <h4>Third Sunday of Advent (Gaudete Sunday)</h4>
+                    <a href="#" class="archive-link">View PDF →</a>
+                </div>
+            </div>
+
+            <div class="archive-note slide-up">
+                <p>Looking for older bulletins? Contact the parish office at (508) 867-6469 or office@carloacutisparish.org</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Submission Info -->
+    <section class="bulletin-submission">
+        <div class="container">
+            <h2 class="section-title slide-up">Submit Bulletin Items</h2>
+
+            <div class="submission-info slide-up">
+                <p>Have an announcement or event for the bulletin?</p>
+
+                <div class="submission-details">
+                    <div class="detail-box">
+                        <h4>Deadline</h4>
+                        <p>Tuesday at 12:00 PM (noon) for the following weekend's bulletin</p>
+                    </div>
+
+                    <div class="detail-box">
+                        <h4>How to Submit</h4>
+                        <p>Email: office@carloacutisparish.org<br>
+                        Phone: (508) 867-6469<br>
+                        In Person: Parish Office (Monday-Friday, 9 AM - 3 PM)</p>
+                    </div>
+
+                    <div class="detail-box">
+                        <h4>Guidelines</h4>
+                        <ul>
+                            <li>Please keep submissions brief and clear</li>
+                            <li>Include date, time, and location for events</li>
+                            <li>Provide contact information if applicable</li>
+                            <li>Parish events take priority for bulletin space</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Blessed Carlo Acutis Parish</h3>
+                    <p>A Catholic community in the Diocese of Worcester, Massachusetts</p>
+                    <p class="parish-motto">"The Eucharist is my highway to Heaven" - Blessed Carlo Acutis</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/about.html">About</a></li>
+                        <li><a href="/mass-times.html">Mass Times</a></li>
+                        <li><a href="/bulletins.html">Bulletins</a></li>
+                        <li><a href="/sacraments.html">Sacraments</a></li>
+                        <li><a href="/ministries.html">Ministries</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><strong>Parish Office:</strong><br>296 North Main Street<br>North Brookfield, MA 01535</p>
+                    <p>Phone: (508) 867-6469</p>
+                    <p>Email: office@carloacutisparish.org</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Church Locations</h4>
+                    <p><strong>Sacred Heart Church:</strong><br>10 Milk Street<br>West Brookfield, MA</p>
+                    <p><strong>St. Joseph Church:</strong><br>296 North Main Street<br>North Brookfield, MA</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Blessed Carlo Acutis Parish. All rights reserved.</p>
+                <p>Diocese of Worcester, Massachusetts</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+    <script src="/js/bulletins.js"></script>
+</body>
+</html>
